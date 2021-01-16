@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="style11.css">
+</head>
+<body>
+
+	<nav>
+		<a href="#"><img src="im3.jpg" width="100px" float="left" class="img_logo"></a>
+		
+		<div class="navbar">
+  <div class="c_list">
+    <button class="cbtn">Categories 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="c-content">
+      <a href="cp.html">Crop Protection</a>
+      <a href="s.html">Seeds</a>
+      <a href="m.html">Machinery</a>
+      <a href="cn.html">Crop Nutrient</a>
+    </div>
+  </div>
+  	 
+  	<a href="about.html">About Us</a>
+  	<a href="contact.html">Contact Us</a>
+	<div class="right_p">
+	<a href="login.html">Login</a>
+	<a href="checkout.html">Cart</a></div>
+	</div>
+  </div>
+  </nav>
+
+  <script type="text/javascript">
+  var ProductDetails = {"name":"V-BIND VIRICIDE","price":"165"}
+        var Product=JSON.stringify(ProductDetails)
+        window.localStorage.setItem("pid9",Product)
+
+    var ProductDetails = {"name":"GIBRAX SP 186","price":"183"}
+        var Product=JSON.stringify(ProductDetails)
+        window.localStorage.setItem("pid10",Product)
+
+    var ProductDetails = {"name":"RILON INSECTICIDE","price":"320"}
+        var Product=JSON.stringify(ProductDetails)
+        window.localStorage.setItem("pid11",Product)
+
+    var ProductDetails = {"name":"ACROBAT FUNGICIDE","price":"690"}
+        var Product=JSON.stringify(ProductDetails)
+        window.localStorage.setItem("pid12",Product)
+    </script>
+
+  
+  
+  <div class="gradient">
+      <div class="column">
+    <div class="card">
+      <img src="p10.jpg" alt="Crop Protection" width="75px">
+      <h3>V-BIND VIRICIDE</h3>
+      <p>100ml</p>
+      <p class="price">&#x20B9;165</p>
+      <p><button onclick="jsredir()">Add to Cart</a></button></p>
+            <script type="text/javascript">
+               <script type="text/javascript">
+        function jsredir() {
+            var pastvalue=JSON.parse(window.localStorage.getItem("cartl"))
+            pastvalue.push("pid9")
+            var str=JSON.stringify(pastvalue)
+            window.localStorage.setItem("cartl",str)        
+              window.location.href = "checkout.html";
+}
+</script>
+          
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="p11.jpg" alt="Crop Protection" width="75px">
+      <h3>GIBRAX SP 186</h3>
+      <p>100gm</p>
+      <p class="price">&#x20B9;183</p>
+       <p><button onclick="jsredir()">Add to Cart</button></p>
+           <script type="text/javascript">
+        function jsredir() {
+            var pastvalue=JSON.parse(window.localStorage.getItem("cartl"))
+            pastvalue.push("pid10")
+            var str=JSON.stringify(pastvalue)
+            window.localStorage.setItem("cartl",str)        
+              window.location.href = "checkout.html";
+}
+</script>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="p11.jpg" alt="Crop Protection" width="75px">
+      <h3>RILON INSECTICIDE</h3>
+      <p>100gm</p>
+      <p class="price">&#x20B9;320</p>
+       <p><button onclick="jsredir()">Add to Cart</button></p>
+        <script type="text/javascript">
+        function jsredir() {
+            var pastvalue=JSON.parse(window.localStorage.getItem("cartl"))
+            pastvalue.push("pid11")
+            var str=JSON.stringify(pastvalue)
+            window.localStorage.setItem("cartl",str)        
+              window.location.href = "checkout.html";
+}
+</script>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="p12.jpg" alt="Crop Nutrient" width="75px">
+    <h3>ACROBAT FUNGICIDE</h3>
+    <p>100gm</p>
+      <p class="price">&#x20B9;690</p>
+       <p><button onclick="jsredir()">Add to Cart</button></p><br>
+        <script type="text/javascript">
+        function jsredir() {
+            var pastvalue=JSON.parse(window.localStorage.getItem("cartl"))
+            pastvalue.push("pid12")
+            var str=JSON.stringify(pastvalue)
+            window.localStorage.setItem("cartl",str)        
+              window.location.href = "checkout.html";
+}
+</script>
+    </div>
+  </div>
+</div>
+
+ <footer>
+      <div class="footer">
+      <p><span>BigHaat</span> : India’s largest Agri Inputs Marketplace Platform providing Agricultural Machinery, Agriculture Equipment, Agricultural Products, Poultry Equipment, Chemical Pesticides, Organic Insecticides, etc. Our clientele includes Farmers, Nurseries, FPOs, NGOs and other Institutional Growers.</p>
+      <a href="about.html">About Us</a><br>
+      <a href="contact.html">Contact Us</a><br>
+   <div class="social">
+      <h4>FIND US</h4>
+      <a href="https://www.facebook.com/BigHaat.India/"><img src="f1.png" width="50px" height="50px"></a><br>
+      <a href="https://twitter.com/bighaatindia"><img src="t.png" width="50px" height="50px"></a><br>
+      <a href="https://www.linkedin.com/company/bighaat-india"><img src="in1.png" width="50px" height="50px"></a><br>
+      <a href="https://www.instagram.com/bighaatindia/"><img src="insta.png" width="50px" height="50px"></a><br>
+    </div>
+</div>
+
+      
+    </footer>
+
+
+
+
+</body>
+</html>

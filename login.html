@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style12.css">
+	
+</head>
+<body> 
+	
+<form action="login.html" method="post">
+ <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+     <div class="container signin">
+    <p>To create a new account<a href="reg.html">Register Here</a>.</p>
+  </div>
+
+ <script type="text/javascript">
+		function validation() {
+					var Username=document.getElementById('uname').value;
+					var Password=document.getElementById('Password').value;
+
+					var Emailcheck=/^[A-Za-z_0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
+					var Passwordcheck=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16$/;
+
+					if (Emailcheck.test(uname)) {
+						document.getElementById('erroremail').innerHTML="  ";
+					} 
+					else {
+						document.getElementById('erroremail').innerHTML="**invalid mail";
+						return false;
+					}
+
+					if (Passwordcheck.test(Password)) {
+						document.getElementById('erroepassword').innerHTML="  ";
+					} 
+					else {
+						document.getElementById('erroepassword').innerHTML="**invalid password";
+						return false;
+					}
+					
+				}
+	</script>
+</div>
+  
+</body>
+</html>

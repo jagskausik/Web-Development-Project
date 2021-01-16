@@ -1,0 +1,193 @@
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.row {margin: 0 -5px;}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  max-width: 300px;
+  font-family: arial;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+<div class="grid">
+		<h2><center>Best Selling</center></h2>
+  <div class="column">
+    <div class="card">
+    	<img src="p1.jpg" alt="Seeds" width="100px">
+    	<h3>ANEETA RIDGE GOURD</h3>
+    	<p>50gms</p>
+    	<p class="price">&#x20B9;415</p>
+    	 <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    	<img src="p2.jpg" alt="Seeds" width="100px">
+    	<h3>INFINITO FUNGICIDE</h3>
+    	<p>150ml</p>
+    	<p class="price">&#x20B9;230</p>
+    	 <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    	<img src="p3.jpg" alt="Seeds" width="100px">
+    	<h3>GIRIJA CAULIFLOWER</h3>
+    	<p>10gms</p>
+    	<p class="price">&#x20B9;310</p>
+    	 <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+    	<img src="p5.jpg" alt="Seeds" width="100px">
+		<h3>V-HUME GRANULES</h3>
+		<p>150gm</p>
+    	<p class="price">&#x20B9;250</p>
+    	 <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+<div class="signup">
+<form action="signin.html">
+		<h2>Sign In</h2>
+		<label>Email:</label><br>
+		<input type="email" name="Email" placeholder="Email Id" required><br>
+		<span id="error mail" style="color: red"></span>
+		<label>Password:</label><br>
+		<input type="password" name="Password" placeholder="Your Password" required><br> 
+		<span id="wrong password" style="color: red"></span>
+		<button type="submit" name="Submit" value="submit">Submit</button>
+	</form>
+	<script type="text/javascript">
+		function validation() {
+					var Email=document.getElementById('Email').value;
+					var Password=document.getElementById('Password').value;
+
+					var Emailcheck=/^[A-Za-z_0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
+					var Passwordcheck=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16$/;
+
+					if (Passwordcheck.test(Password)) {
+						document.getElementById('erroepassword').innerHTML="  ";
+					} 
+					else {
+						document.getElementById('erroepassword').innerHTML="**invalid password";
+						return false;
+					}
+					if (Emailcheck.test(Email)) {
+						document.getElementById('erroremail').innerHTML="  ";
+					} 
+					else {
+						document.getElementById('erroremail').innerHTML="**invalid mail";
+						return false;
+					}
+				}
+	</script>
+	
+</div>
+
+
+
+
+body{
+	background-image: linear-gradient( 120deg,light green , dark green)
+	height: 1000px;
+}
+.signup{
+	float: center;
+}
+.signup form{
+	margin: 20px;
+	box-shadow: 0px 10px 20px 0px black;
+	border-radius: 20px;
+	padding: 10px;
+}
+.signup form h2{
+	text-align: center;
+	color: brown;
+	font-family: verdana,sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 10px;
+}
+.signup form label{
+	color: green;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin: 10px;
+}
+.signup form input{
+	outline: none;
+	border: none;
+	margin: 10px;
+	width: 300px;
+	height: 50px;
+}
+.signup form button{
+	 border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  font-size: 18px;
+}
+
+
+ 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="style11.css">
+</head>
+<body onload="javascript:changeCartCount()">
+
+	<nav>
+		<a href="#"><img src="im3.jpg" width="100px" float="left" class="img_logo"></a>
+		
+		<div class="navbar">
+  <div class="c_list">
+    <button class="cbtn">Categories 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="c-content">
+      <a href="cp.html">Crop Protection</a>
+      <a href="s.html">Seeds</a>
+      <a href="m.html">Machinery</a>
+      <a href="cn.html">Crop Nutrient</a>
+    </div>
+  </div>
+  	 
+  	<a href="about.html">About Us</a>
+  	<a href="contact.html">Contact Us</a>
+	<div class="right_p">
+	<a href="login.html">Login</a>
+  <script type="text/javascript">
+
+    function changeCartCount(){
+      if( window.localStorage.getItem("cartl") !== null){
+         var cartAnchor = document.getElementById("cart-nav")
+         var count = JSON.parse(window.localStorage.getItem("cartl")).length
+         cartAnchor.text = "Cart(" + count++ + ")"
+    }else{
+         var cartAnchor = document.getElementById("cart-nav")
+         cartAnchor.text = "Cart(0)"
+    }
+
+    }
+    function moveToCheckOutPage(){
+      window.location.href = "checkout.html"
+    }
+  </script>>
+
+	<a onclick="moveToCheckOutPage()" id="cart-nav">Cart</a></div>
+	</div>
+
+		</div>
+	</nav>
+<script type="text/javascript">
+	var ProductDetails = {"name":"ANEETA RIDGE GOURD","price":"415"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid1",Product)
+
+    var ProductDetails = {"name":"INFINITO FUNGICIDE","price":"230"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid2",Product)
+
+    var ProductDetails = {"name":"GIRIJA CAULIFLOWER","price":"310"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid3",Product)
+
+    var ProductDetails = {"name":"V-HUME GRANULES","price":"250"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid4",Product)
+
+    var ProductDetails = {"name":"NS 777 WATERMELON","price":"395"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid5",Product)
+
+    var ProductDetails = {"name":"SHREYA 831TSC TOMATO","price":"3000 Seeds"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid6",Product)
+
+    var ProductDetails = {"name":"RUCHA CUCUMBER","price":"495"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid7",Product)
+
+    var ProductDetails = {"name":"NS 474 RIDGE GOURD","price":"340"}
+    		var Product=JSON.stringify(ProductDetails)
+    		window.localStorage.setItem("pid8",Product)
+
+	
+</script>
+  
+	
+	<div class="gradient">
+		<h2><center>Best Selling</center></h2>
+  <div class="column">
+    <div class="card">
+    	<img src="p1.jpg" alt="Seeds" width="75px">
+    	<h3>ANEETA RIDGE GOURD</h3>
+    	<p>50gms</p>
+    	<p class="price">&#x20B9;415</p>
+      <script type="text/javascript">
+        function jsredir(id ) {
+            if (window.localStorage.getItem("cartl") !== null){
+            var pastvalue=JSON.parse(window.localStorage.getItem("cartl"))
+            pastvalue.push(id)
+            var str=JSON.stringify(pastvalue)
+            window.localStorage.setItem("cartl",str) 
+          }else{
+            var newValue = [id]
+            var str=JSON.stringify(newValue)
+            window.localStorage.setItem("cartl",str)        
+          }
+          changeCartCount()
+                    
+             
+}
+</script>
+    	<p><button onclick="jsredir('pid1')">Add to Cart</button></p>
+    	
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    	<img src="p2.jpg" alt="Pesticide" width="75px">
+    	<h3>INFINITO FUNGICIDE</h3>
+    	<p>150ml</p>
+    	<p class="price">&#x20B9;230</p>
+    	 <p><button onclick="jsredir('pid2')">Add to Cart</button></p>
+    	
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    	<img src="p3.jpg" alt="Seeds" width="75px">
+    	<h3>GIRIJA CAULIFLOWER</h3>
+    	<p>10gms</p>
+    	<p class="price">&#x20B9;310</p>
+    	 <p><button onclick="jsredir('pid3')">Add to Cart</button></p>
+  </div>
+</div>
+  
+  <div class="column">
+    <div class="card">
+    	<img src="p5.jpg" alt="Crop Nutrient" width="75px">
+		<h3>V-HUME GRANULES</h3>
+		<p>150gm</p>
+    	<p class="price">&#x20B9;250</p>
+    	 <p><button onclick="jsredir('pid4')">Add to Cart</button></p>
+
+    </div>
+  </div>
+</div>
+
+<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/kQXIbi6c6es" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="v_content">
+		<p>An important video</p>
+	</div>
+</div>
+
+
+<div class="gradient">
+		<h2><center>Seasonal</center></h2>
+  <div class="column">
+    <div class="card">
+    	<img src="p6.jpg" alt="Seeds" width="75px">
+    	<h3>NS 777 WATERMELON</h3>
+    	<p>50gm</p>
+    	<p class="price">&#x20B9;395</p>
+    	 <p><button onclick="jsredir('pid5')">Add to Cart</button></p>
+  
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    	<img src="p7.jpg" alt="Seeds" width="75px">
+    	<h3>SHREYA 831TSC TOMATO</h3>
+    	<p>3000 seeds</p>
+    	<p class="price">&#x20B9;1,210</p>
+    	 <p><button onclick="jsredir('pid6')">Add to Cart</button></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+    	<img src="p8.jpg" alt="Seeds" width="75px">
+    	<h3>RUCHA CUCUMBER</h3>
+    	<p>10gms</p>
+    	<p class="price">&#x20B9;495</p>
+    	 <p><button onclick="jsredir('pid7')">Add to Cart</button></p>
+    	 
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+    	<img src="p9.jpg" alt="Seeds" width="75px">
+		<h3>NS 474 RIDGE GOURD</h3>
+		<p>50gm</p>
+    	<p class="price">&#x20B9;340</p>
+    	 <p><button onclick="jsredir('pid8')">Add to Cart</button></p>
+   
+    </div>
+  </div>
+</div>
+
+    
+    <footer>
+    	<div class="footer">
+    	<p><span>BigHaat</span> : India’s largest Agri Inputs Marketplace Platform providing Agricultural Machinery, Agriculture Equipment, Agricultural Products, Poultry Equipment, Chemical Pesticides, Organic Insecticides, etc. Our clientele includes Farmers, Nurseries, FPOs, NGOs and other Institutional Growers.</p>
+    	<a href="about.html">About Us</a><br>
+    	<a href="contact.html">Contact Us</a><br>
+   <div class="social">
+   		<h4>FIND US</h4>
+    	<a href="https://www.facebook.com/BigHaat.India/"><img src="f1.png" width="50px" height="50px"></a><br>
+    	<a href="https://twitter.com/bighaatindia"><img src="t.png" width="50px" height="50px"></a><br>
+    	<a href="https://www.linkedin.com/company/bighaat-india"><img src="in1.png" width="50px" height="50px"></a><br>
+    	<a href="https://www.instagram.com/bighaatindia/"><img src="insta.png" width="50px" height="50px"></a><br>
+    </div>
+</div>
+
+    	
+    </footer>
+
+
+
+
+</body>
+</html>
